@@ -7,9 +7,26 @@ def swap(x, y):
     - print the swapped values if both x and y are numeric.
     """
     return
+    
+   # Check if both are numeric
+    if not (isinstance(x, (int, float)) and isinstance(y, (int, float))):
+        return -1
 
+    # Swap values using only x and y
+    x = x + y
+    y = x - y
+    x = x - y
+
+    print("x =", x)
+    print("y =", y)
 
 # Task 2
 # Invoke the function "swap" using the following scenarios:
 # - "Apple", 10
 # - 9, 17
+
+print(swap("Apple", 10))   # Expected output: -1
+
+swap(9, 17)                # Expected output:
+                            # x = 17
+                            # y = 9
